@@ -1,0 +1,62 @@
+.areas-hero {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 4rem 0;
+}
+
+.areas-hero h1 {
+    color: white;
+}
+
+.map-placeholder {
+    background-color: #E5E7EB;
+    height: 300px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.city-group h3 {
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.city-group ul {
+    list-style: none;
+}
+
+.city-group li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+    color: var(--color-text-main);
+}
+
+.city-group li svg {
+    color: var(--color-text-muted);
+}
+
+.areas-cta {
+    margin-top: 4rem;
+    background-color: var(--color-bg-light);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+}
+
+.areas-cta h3 {
+    margin-bottom: 1rem;
+}

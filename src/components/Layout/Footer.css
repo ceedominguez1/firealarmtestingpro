@@ -1,0 +1,89 @@
+.footer {
+    background-color: var(--color-secondary);
+    color: white;
+    padding-top: var(--spacing-xl);
+    margin-top: auto;
+}
+
+.footer h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: var(--spacing-xl);
+}
+
+.footer-brand p {
+    color: #9CA3AF;
+    margin: 1rem 0;
+    max-width: 300px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-links ul,
+.contact-list {
+    list-style: none;
+}
+
+.footer-links li,
+.contact-list li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #D1D5DB;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: #D1D5DB;
+}
+
+.icon-gold {
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.cert-logos {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cert-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
