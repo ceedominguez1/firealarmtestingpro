@@ -172,23 +172,23 @@
                     <form id="quoteForm">
                         <div class="form-group">
                             <label for="fullName">Full Name <span class="required">*</span></label>
-                            <input type="text" id="fullName" name="entry.2034928511" placeholder="John Smith" required>
+                            <input type="text" id="fullName" name="entry.2116052852" placeholder="John Smith" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="email" name="entry.1651265940" placeholder="john@company.com" required>
+                            <input type="email" id="email" name="entry.1558582620" placeholder="john@company.com" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="entry.488727206" placeholder="(555) 123-4567" required>
+                            <input type="tel" id="phone" name="entry.89587398" placeholder="(555) 123-4567" required>
                         </div>
                         <div class="form-group">
                             <label for="address">Address to be Serviced <span class="required">*</span></label>
-                            <input type="text" id="address" name="entry.278959202" placeholder="123 Main St, Los Angeles, CA" required>
+                            <input type="text" id="address" name="entry.288713975" placeholder="123 Main St, Los Angeles, CA" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message (Optional)</label>
-                            <textarea id="message" name="entry.2058381089" placeholder="Tell us about your fire alarm testing needs..."></textarea>
+                            <textarea id="message" name="entry.1618498056" placeholder="Tell us about your fire alarm testing needs..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit Request</button>
                         <p class="form-note">We'll email you with a response within 24 hours.</p>
@@ -286,27 +286,57 @@
         quoteForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const formData = new FormData();
-            formData.append('entry.2034928511', document.getElementById('fullName').value);
-            formData.append('entry.1651265940', document.getElementById('email').value);
-            formData.append('entry.488727206', document.getElementById('phone').value);
-            formData.append('entry.278959202', document.getElementById('address').value);
-            formData.append('entry.2058381089', document.getElementById('message').value);
+            const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScwsv2HxDf5tVjlFsH3k06VHVzNsYz8kVhM4o1AfeZqoO4LGg/formResponse';
 
-            fetch('https://docs.google.com/forms/d/e/1FAIpQLScwsv2HxDf5tVjlFsH3k06VHVzNsYz8kVhM4o1AfeZqoO4LGg/formResponse', {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
-            }).then(() => {
+            const params = new URLSearchParams();
+            params.append('entry.2116052852', document.getElementById('fullName').value);
+            params.append('entry.1558582620', document.getElementById('email').value);
+            params.append('entry.89587398', document.getElementById('phone').value);
+            params.append('entry.288713975', document.getElementById('address').value);
+            params.append('entry.1618498056', document.getElementById('message').value);
+            params.append('submit', 'Submit');
+
+            // Create hidden iframe for submission
+            const iframe = document.createElement('iframe');
+            iframe.name = 'hidden_iframe_' + Date.now();
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+
+            // Create temporary form
+            const tempForm = document.createElement('form');
+            tempForm.method = 'POST';
+            tempForm.action = baseUrl;
+            tempForm.target = iframe.name;
+
+            // Add fields to temp form
+            const fields = {
+                'entry.2116052852': document.getElementById('fullName').value,
+                'entry.1558582620': document.getElementById('email').value,
+                'entry.89587398': document.getElementById('phone').value,
+                'entry.288713975': document.getElementById('address').value,
+                'entry.1618498056': document.getElementById('message').value
+            };
+
+            for (const [name, value] of Object.entries(fields)) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = name;
+                input.value = value;
+                tempForm.appendChild(input);
+            }
+
+            document.body.appendChild(tempForm);
+            tempForm.submit();
+
+            // Show success message
+            setTimeout(function() {
                 quoteForm.style.display = 'none';
                 formSuccess.classList.add('show');
                 lucide.createIcons();
-            }).catch(() => {
-                // Even if there's an error, the form likely submitted (no-cors doesn't return response)
-                quoteForm.style.display = 'none';
-                formSuccess.classList.add('show');
-                lucide.createIcons();
-            });
+                // Cleanup
+                document.body.removeChild(tempForm);
+                document.body.removeChild(iframe);
+            }, 1000);
         });
     </script>
 </body>
