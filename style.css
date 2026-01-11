@@ -769,6 +769,14 @@ cite {
         display: block;
     }
 
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .header-container {
+        padding: 0 0.5rem;
+    }
+
     h1 {
         font-size: 2.25rem;
     }
