@@ -21,10 +21,30 @@
                 <a href="areas.html" class="nav-link">Areas Served</a>
             </nav>
             <div class="header-actions">
-                <a href="tel:4244071407" class="phone-link"><i data-lucide="phone" size="18"></i> (424) 407-1407</a>
+                <a href="tel:4244071407" class="phone-link"><i data-lucide="phone" size="18"></i><span>(424) 407-1407</span></a>
+                <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
             </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i data-lucide="menu" size="28"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="compliance.html" class="nav-link">Compliance</a>
+        <a href="areas.html" class="nav-link">Areas Served</a>
+        <div class="mobile-actions">
+            <a href="tel:4244071407" class="phone-link">
+                <i data-lucide="phone" size="18"></i>
+                <span>(424) 407-1407</span>
+            </a>
+            <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </div>
 
     <section class="service-hero" style="background-image: url('images/annual_testing.png');">
         <div class="container">
@@ -71,7 +91,24 @@
             <p>&copy; 2026 FireAlarmTestingPro. All rights reserved.</p>
         </div>
     </footer>
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+    </script>
 </body>
 
 </html>
