@@ -1,0 +1,218 @@
+{
+  "name": "Contact Form - Fire Alarm Testing Pro",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "contact-form",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "b1a2c3d4-0001-4000-8000-000000000001",
+      "name": "Receive Form Submission",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ],
+      "webhookId": "contact-form"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Security: Validate file attachments and sanitize form input\r\nvar ALLOWED_TYPES = [\r\n  'application/pdf',\r\n  'image/jpeg',\r\n  'image/png',\r\n  'image/gif',\r\n  'image/webp',\r\n  'application/msword',\r\n  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',\r\n  'application/vnd.ms-excel',\r\n  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',\r\n  'text/plain'\r\n];\r\nvar MAX_SIZE = 10 * 1024 * 1024; // 10MB\r\nvar BLOCKED_EXT = ['exe','bat','cmd','sh','ps1','vbs','js','msi','dll','scr','com','php','py','rb','pl','jar','wsf','hta','cpl','inf','reg'];\r\n\r\nfunction esc(s) {\r\n  if (!s) return '';\r\n  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;');\r\n}\r\n\r\nvar item = $input.first();\r\nvar body = item.json.body || item.json;\r\nvar isValid = true;\r\nvar errorMessage = '';\r\nvar hasAttachment = false;\r\nvar fileName = '';\r\n\r\nvar bd = item.binary || {};\r\nvar keys = Object.keys(bd);\r\n\r\nif (keys.length > 0) {\r\n  hasAttachment = true;\r\n  var file = bd[keys[0]];\r\n  fileName = file.fileName || 'unknown';\r\n\r\n  // Validate MIME type\r\n  if (!ALLOWED_TYPES.includes(file.mimeType)) {\r\n    isValid = false;\r\n    errorMessage = 'File type not allowed. Accepted: PDF, JPG, PNG, GIF, DOC, DOCX, XLS, XLSX, TXT.';\r\n  }\r\n\r\n  // Validate file size\r\n  if (file.fileSize && file.fileSize > MAX_SIZE) {\r\n    isValid = false;\r\n    errorMessage = 'File exceeds the 10MB size limit.';\r\n  }\r\n\r\n  // Block dangerous extensions regardless of MIME type\r\n  var ext = fileName.split('.').pop().toLowerCase();\r\n  if (BLOCKED_EXT.includes(ext)) {\r\n    isValid = false;\r\n    errorMessage = 'File extension \".' + ext + '\" is blocked for security reasons.';\r\n  }\r\n}\r\n\r\nvar fn = esc(body.fullName || '');\r\nvar em = esc(body.email || '');\r\nvar ph = esc(body.phone || '');\r\nvar addr = esc(body.address || '');\r\nvar msg = esc(body.message || 'N/A');\r\n\r\nvar emailHtml = '<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto\">'\r\n  + '<div style=\"background:#1e3a5f;color:#fff;padding:20px;text-align:center\">'\r\n  + '<h2 style=\"margin:0\">New Quote Request</h2>'\r\n  + '<p style=\"margin:5px 0 0;opacity:0.9\">Fire Alarm Testing Pro</p></div>'\r\n  + '<div style=\"padding:20px;background:#f9fafb\">'\r\n  + '<table style=\"width:100%;border-collapse:collapse\">'\r\n  + '<tr><td style=\"padding:10px;border-bottom:1px solid #e5e7eb;font-weight:bold;width:140px\">Name</td>'\r\n  + '<td style=\"padding:10px;border-bottom:1px solid #e5e7eb\">' + fn + '</td></tr>'\r\n  + '<tr><td style=\"padding:10px;border-bottom:1px solid #e5e7eb;font-weight:bold\">Email</td>'\r\n  + '<td style=\"padding:10px;border-bottom:1px solid #e5e7eb\"><a href=\"mailto:' + em + '\">' + em + '</a></td></tr>'\r\n  + '<tr><td style=\"padding:10px;border-bottom:1px solid #e5e7eb;font-weight:bold\">Phone</td>'\r\n  + '<td style=\"padding:10px;border-bottom:1px solid #e5e7eb\"><a href=\"tel:' + ph + '\">' + ph + '</a></td></tr>'\r\n  + '<tr><td style=\"padding:10px;border-bottom:1px solid #e5e7eb;font-weight:bold\">Address</td>'\r\n  + '<td style=\"padding:10px;border-bottom:1px solid #e5e7eb\">' + addr + '</td></tr>'\r\n  + '<tr><td style=\"padding:10px;border-bottom:1px solid #e5e7eb;font-weight:bold\">Message</td>'\r\n  + '<td style=\"padding:10px;border-bottom:1px solid #e5e7eb\">' + msg + '</td></tr>'\r\n  + '<tr><td style=\"padding:10px;font-weight:bold\">Attachment</td>'\r\n  + '<td style=\"padding:10px\">' + (hasAttachment ? fileName : 'None') + '</td></tr>'\r\n  + '</table></div>'\r\n  + '<div style=\"padding:15px;background:#e5e7eb;text-align:center;font-size:12px;color:#6b7280\">'\r\n  + 'Submitted via firealarmtestingpro.com</div></div>';\r\n\r\nreturn [{\r\n  json: {\r\n    isValid: isValid,\r\n    errorMessage: errorMessage,\r\n    hasAttachment: hasAttachment,\r\n    fileName: fileName,\r\n    emailHtml: emailHtml,\r\n    fullName: body.fullName || '',\r\n    email: body.email || '',\r\n    phone: body.phone || '',\r\n    address: body.address || '',\r\n    message: body.message || ''\r\n  },\r\n  binary: hasAttachment ? item.binary : undefined\r\n}];\r\n"
+      },
+      "id": "b1a2c3d4-0002-4000-8000-000000000002",
+      "name": "Validate & Format",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": ""
+          },
+          "conditions": [
+            {
+              "id": "cond-valid",
+              "leftValue": "={{ $json.isValid }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "b1a2c3d4-0003-4000-8000-000000000003",
+      "name": "File Valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "=your-email@example.com",
+        "subject": "=New Quote Request from {{ $json.fullName }}",
+        "emailType": "html",
+        "html": "={{ $json.emailHtml }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "id": "b1a2c3d4-0004-4000-8000-000000000004",
+      "name": "Send Email Notification",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        980,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: true, message: 'Your request has been submitted successfully.' }) }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Access-Control-Allow-Headers",
+                "value": "Content-Type"
+              }
+            ]
+          }
+        }
+      },
+      "id": "b1a2c3d4-0005-4000-8000-000000000005",
+      "name": "Respond Success",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1220,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: false, message: $json.errorMessage || 'Invalid submission.' }) }}",
+        "options": {
+          "responseCode": "400",
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Access-Control-Allow-Headers",
+                "value": "Content-Type"
+              }
+            ]
+          }
+        }
+      },
+      "id": "b1a2c3d4-0006-4000-8000-000000000006",
+      "name": "Respond Error",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        980,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Setup Instructions\\n\\n**1. Configure SMTP Credentials:**\\nClick the \\\"Send Email Notification\\\" node and set up your SMTP credentials (or swap it for a Gmail/Outlook node).\\n\\n**2. Set Recipient Email:**\\nIn the \\\"Send Email Notification\\\" node, replace `your-email@example.com` with your actual email.\\n\\n**3. Activate the Workflow:**\\nClick \\\"Active\\\" toggle in the top-right. Copy the Production webhook URL and provide it for the website form.\\n\\n**4. Test:**\\nUse the \\\"Test URL\\\" first to verify everything works before going live.\\n\\n---\\n**Security features built in:**\\n- File type validation (PDF, images, Office docs, TXT only)\\n- 10MB size limit\\n- Dangerous extension blocking (.exe, .bat, .js, etc.)\\n- HTML escaping to prevent XSS in emails",
+        "height": 476,
+        "width": 410,
+        "color": 4
+      },
+      "id": "b1a2c3d4-0007-4000-8000-000000000007",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        -200
+      ]
+    }
+  ],
+  "connections": {
+    "Receive Form Submission": {
+      "main": [
+        [
+          {
+            "node": "Validate & Format",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate & Format": {
+      "main": [
+        [
+          {
+            "node": "File Valid?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "File Valid?": {
+      "main": [
+        [
+          {
+            "node": "Send Email Notification",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Email Notification": {
+      "main": [
+        [
+          {
+            "node": "Respond Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0
+}

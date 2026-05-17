@@ -610,6 +610,84 @@ cite {
     font-size: 1.1rem;
 }
 
+.contact-form .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.file-upload {
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.file-upload:hover,
+.file-upload.dragover {
+    border-color: var(--color-primary);
+    background-color: rgba(211, 47, 47, 0.04);
+}
+
+.file-upload-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-text-muted);
+}
+
+.file-upload-prompt small {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+}
+
+.file-upload-icon {
+    width: 24px;
+    height: 24px;
+    color: #9CA3AF;
+}
+
+.file-upload-selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-text-main);
+    font-weight: 500;
+}
+
+.file-remove-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 0 0.25rem;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.file-remove-btn:hover {
+    color: var(--color-primary);
+}
+
+.file-error {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    min-height: 0;
+}
+
+.form-error {
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 0.75rem;
+    min-height: 0;
+}
+
 .form-note {
     text-align: center;
     margin-top: 1rem;
@@ -713,13 +791,77 @@ cite {
         gap: 2rem;
     }
 
-    .header-actions,
     .nav-links {
         display: none;
     }
 
+    .header-actions {
+        gap: 0.75rem;
+    }
+
+    .header-actions .btn {
+        display: none;
+    }
+
+    .header-actions .phone-link {
+        background-color: var(--color-primary);
+        color: white;
+        padding: 0.6rem 1rem;
+        border-radius: var(--radius-md);
+        font-weight: 700;
+        font-size: 0.9rem;
+        animation: pulse-attention 2s infinite;
+    }
+
+    .header-actions .phone-link i {
+        display: none;
+    }
+
+    .header-actions .phone-link span {
+        display: inline;
+    }
+
+    .header-actions .phone-link span::before {
+        content: "Call Now";
+    }
+
+    .header-actions .phone-link span font,
+    .header-actions .phone-link span {
+        font-size: 0;
+    }
+
+    .header-actions .phone-link span::before {
+        font-size: 0.9rem;
+    }
+
+    @keyframes pulse-attention {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4);
+        }
+        50% {
+            box-shadow: 0 0 0 8px rgba(211, 47, 47, 0);
+        }
+    }
+
     .mobile-menu-btn {
         display: block;
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
+    }
+
+    body {
+        padding-top: 80px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .header-container {
+        padding: 0 0.5rem;
     }
 
     h1 {

@@ -4,10 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Areas Served | FireAlarmTestingPro LA</title>
+    <title>Fire Alarm Testing Service Areas | Los Angeles, SFV, Torrance, Santa Monica | FireAlarmTestingPro</title>
+    <meta name="description" content="Local fire alarm testing & inspection across Greater Los Angeles, San Fernando Valley, Torrance, Santa Monica, Burbank, Glendale, Pasadena, Long Beach, Orange County and Ventura County.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://firealarmtestingpro.com/areas.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://firealarmtestingpro.com/areas.html">
+    <meta property="og:title" content="Fire Alarm Testing Service Areas | FireAlarmTestingPro">
+    <meta property="og:description" content="Local fire alarm testing across LA, SFV, Torrance, Santa Monica, Burbank, Glendale, Pasadena & Long Beach.">
+    <meta property="og:image" content="https://firealarmtestingpro.com/images/hero.png">
+    <meta property="og:site_name" content="FireAlarmTestingPro">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fire Alarm Testing Service Areas | FireAlarmTestingPro">
+    <meta name="twitter:description" content="Local fire alarm testing across LA, SFV, Torrance, Santa Monica.">
+    <meta name="twitter:image" content="https://firealarmtestingpro.com/images/hero.png">
+
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Fire Alarm Testing and Inspection",
+      "provider": {"@id": "https://firealarmtestingpro.com/#business"},
+      "areaServed": [
+        {"@type": "City", "name": "Los Angeles", "containedInPlace": {"@type": "State", "name": "California"}},
+        {"@type": "City", "name": "Santa Monica"},
+        {"@type": "City", "name": "Torrance"},
+        {"@type": "City", "name": "Burbank"},
+        {"@type": "City", "name": "Glendale"},
+        {"@type": "City", "name": "Van Nuys"},
+        {"@type": "City", "name": "Sherman Oaks"},
+        {"@type": "City", "name": "Pasadena"},
+        {"@type": "City", "name": "Long Beach"},
+        {"@type": "City", "name": "Northridge"},
+        {"@type": "City", "name": "Chatsworth"},
+        {"@type": "AdministrativeArea", "name": "San Fernando Valley"},
+        {"@type": "AdministrativeArea", "name": "Orange County"}
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -26,7 +69,7 @@
                     <i data-lucide="phone" size="18"></i>
                     <span>(424) 407-1407</span>
                 </a>
-                <a href="#quote" class="btn btn-primary">Get a Quote</a>
+                <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
@@ -97,13 +140,21 @@
                 </div>
             </div>
 
-            <div
-                style="background: #E5E7EB; height: 350px; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px solid var(--color-border);">
-                <div class="text-center" style="position: relative; z-index: 1;">
-                    <i data-lucide="map" size="48" style="color: #9CA3AF;"></i>
-                    <p style="color: #6B7280; font-weight: 600; margin-top: 1rem;">Service Area Map View</p>
-                </div>
+            <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.2742442864!2d-118.69191921458045!3d34.02016130939498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1704900000000!5m2!1sen!2sus"
+                    width="100%"
+                    height="400"
+                    style="border:0; display: block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
+            <p class="text-center" style="margin-top: 1rem; color: var(--color-text-muted);">
+                <i data-lucide="info" size="16" style="display: inline; vertical-align: middle;"></i>
+                We proudly serve Los Angeles County, Orange County, Ventura County, and the San Fernando Valley.
+            </p>
         </div>
     </section>
 
