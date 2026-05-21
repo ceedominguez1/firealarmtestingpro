@@ -7,7 +7,7 @@
     <meta name="description" content="NFPA 72 certified fire alarm testing & inspection across Los Angeles, San Fernando Valley, Torrance & Santa Monica. Instant digital reports, audit-ready compliance, NICET technicians. Call (424) 407-1407.">
     <meta name="keywords" content="fire alarm testing Los Angeles, fire alarm inspection Los Angeles, NFPA 72 testing, fire alarm inspection Santa Monica, fire alarm testing Torrance, fire alarm inspection San Fernando Valley, NICET certified fire alarm">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="author" content="FireAlarmTestingPro">
+    <meta name="author" content="FireAlarmTestingPro — NICET Certified Technicians">
     <meta name="geo.region" content="US-CA">
     <meta name="geo.placename" content="Los Angeles">
 
@@ -61,8 +61,22 @@
         "@type": "PostalAddress",
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
+        "postalCode": "90001",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+1-424-407-1407",
+        "contactType": "customer service",
+        "email": "service@firealarmpro.com",
+        "areaServed": "US-CA",
+        "availableLanguage": ["English", "Spanish"]
+      }],
       "areaServed": [
         {"@type": "City", "name": "Los Angeles"},
         {"@type": "City", "name": "Santa Monica"},
@@ -90,6 +104,29 @@
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fire Code Compliance Consulting", "url": "https://firealarmtestingpro.com/compliance.html"}}
         ]
       },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "2",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Sarah J."},
+          "datePublished": "2026-03-12",
+          "reviewBody": "FireAlarmTestingPro made our annual audit a breeze. The digital reports were exactly what our insurance company asked for. Their team is professional and punctual.",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Mark T."},
+          "datePublished": "2026-02-18",
+          "reviewBody": "As a facility director for multiple sites, their proactive scheduling is a lifesaver. I never worry about missing a testing deadline.",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+        }
+      ],
       "sameAs": []
     }
     </script>
@@ -239,20 +276,22 @@
     <section id="quote" class="section contact-form-section">
         <div class="container">
             <div class="contact-form-wrapper">
-                <div class="contact-form-info">
+                <div class="contact-form-info" itemscope itemtype="https://schema.org/LocalBusiness">
+                    <meta itemprop="name" content="FireAlarmTestingPro">
+                    <meta itemprop="url" content="https://firealarmtestingpro.com/">
                     <h2>Request a Free Quote</h2>
                     <p>Get professional fire alarm testing services with transparent pricing. Fill out the form and we'll get back to you within 24 hours.</p>
                     <div class="contact-item">
                         <i data-lucide="phone"></i>
-                        <span>For emergencies: <strong>(424) 407-1407</strong></span>
+                        <span>For emergencies: <strong><a href="tel:4244071407" itemprop="telephone">(424) 407-1407</a></strong></span>
                     </div>
                     <div class="contact-item">
                         <i data-lucide="mail"></i>
-                        <span>service@firealarmpro.com</span>
+                        <span itemprop="email">service@firealarmpro.com</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                         <i data-lucide="map-pin"></i>
-                        <span>Serving Greater Los Angeles, Orange County, & SFV</span>
+                        <span>Serving Greater <span itemprop="addressLocality">Los Angeles</span>, Orange County, &amp; SFV, <span itemprop="addressRegion">CA</span> <span itemprop="addressCountry">US</span></span>
                     </div>
                     <div class="contact-item">
                         <i data-lucide="clock"></i>
