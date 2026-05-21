@@ -39,6 +39,10 @@
 - [Service Areas](https://firealarmtestingpro.com/areas.html): Cities and counties served.
 - [Sitemap](https://firealarmtestingpro.com/sitemap.xml)
 
+## Guides
+
+- [NFPA 72 Inspection Frequency Schedule (2026)](https://firealarmtestingpro.com/nfpa-72-inspection-frequency.html): Complete reference table for daily, weekly, monthly, quarterly, semi-annual, and annual testing intervals for every fire alarm component. Covers control panels, batteries, pull stations, smoke detectors, heat detectors, notification appliances, waterflow, supervisory devices, off-premises monitoring, mass notification, and the NFPA 101 monthly emergency lighting test. Includes California Fire Code and local AHJ overlay (LAFD, SMFD, TFD, Burbank FD, Glendale FD).
+
 ## City pages
 
 - [Los Angeles](https://firealarmtestingpro.com/los-angeles.html): LAFD jurisdiction. DTLA, Hollywood, Mid-Wilshire, Koreatown, Westside, Mid-City. ZIP codes 900xx, 901xx.
