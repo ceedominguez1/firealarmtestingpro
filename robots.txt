@@ -18,3 +18,6 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://firealarmtestingpro.com/sitemap.xml
+
+# LLM-readable facts
+# https://firealarmtestingpro.com/llms.txt

@@ -7,6 +7,9 @@
     <title>Emergency Lighting & Exit Sign Testing Los Angeles | FireAlarmTestingPro</title>
     <meta name="description" content="Emergency lighting and exit sign testing across Los Angeles. NFPA 101 compliant 30-second and 90-minute load tests, battery replacement, audit-ready digital reports. Call (424) 407-1407.">
     <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="FireAlarmTestingPro — NICET Certified Technicians">
+    <meta name="geo.region" content="US-CA">
+    <meta name="geo.placename" content="Los Angeles">
     <link rel="canonical" href="https://firealarmtestingpro.com/lighting.html">
 
     <meta property="og:type" content="article">
@@ -14,13 +17,17 @@
     <meta property="og:title" content="Emergency Lighting & Exit Sign Testing Los Angeles | FireAlarmTestingPro">
     <meta property="og:description" content="NFPA 101 compliant emergency lighting and exit sign testing across LA.">
     <meta property="og:image" content="https://firealarmtestingpro.com/images/hero.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="FireAlarmTestingPro">
+    <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Emergency Lighting & Exit Sign Testing Los Angeles">
     <meta name="twitter:description" content="NFPA 101 compliant emergency lighting and exit sign testing in LA.">
     <meta name="twitter:image" content="https://firealarmtestingpro.com/images/hero.png">
 
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="apple-touch-icon" href="/images/favicon.png">
 
@@ -38,12 +45,27 @@
       "category": "Fire Safety Inspection",
       "description": "30-second monthly and 90-minute annual load testing of emergency lighting and illuminated exit signs per NFPA 101 across Greater Los Angeles. Battery replacement and audit-ready reporting included.",
       "provider": {"@id": "https://firealarmtestingpro.com/#business"},
-      "areaServed": [{"@type": "City", "name": "Los Angeles"}, {"@type": "AdministrativeArea", "name": "San Fernando Valley"}, {"@type": "City", "name": "Santa Monica"}, {"@type": "City", "name": "Torrance"}]
+      "areaServed": [{"@type": "City", "name": "Los Angeles"}, {"@type": "AdministrativeArea", "name": "San Fernando Valley"}, {"@type": "City", "name": "Santa Monica"}, {"@type": "City", "name": "Torrance"}],
+      "audience": {"@type": "BusinessAudience", "name": "Commercial property managers and facility teams"},
+      "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "USD",
+          "description": "Emergency lighting and exit sign testing pricing depends on fixture count and building size. Annual 90-minute load test and monthly 30-second test packages available. Request a free quote."
+        },
+        "url": "https://firealarmtestingpro.com/#quote",
+        "businessFunction": "https://purl.org/goodrelations/v1#Sell"
+      }
     }
     </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo"><span>Fire</span>AlarmTestingPro</a>
@@ -52,15 +74,16 @@
                 <a href="services.html" class="nav-link active">Services</a>
                 <a href="compliance.html" class="nav-link">Compliance</a>
                 <a href="areas.html" class="nav-link">Areas Served</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
             <div class="header-actions">
-                <a href="tel:4244071407" class="phone-link"><i data-lucide="phone" size="18"></i><span>(424) 407-1407</span></a>
+                <a href="tel:4244071407" class="phone-link" aria-label="Call FireAlarmTestingPro at (424) 407-1407"><i data-lucide="phone" aria-hidden="true" size="18"></i><span>(424) 407-1407</span></a>
                 <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
             </div>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i data-lucide="menu" size="28"></i>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+                <i data-lucide="menu" size="28" aria-hidden="true"></i>
             </button>
         </div>
     </header>
@@ -71,15 +94,18 @@
         <a href="services.html" class="nav-link active">Services</a>
         <a href="compliance.html" class="nav-link">Compliance</a>
         <a href="areas.html" class="nav-link">Areas Served</a>
+                <a href="contact.html" class="nav-link">Contact</a>
         <div class="mobile-actions">
-            <a href="tel:4244071407" class="phone-link">
-                <i data-lucide="phone" size="18"></i>
+            <a href="tel:4244071407" class="phone-link" aria-label="Call FireAlarmTestingPro at (424) 407-1407">
+                <i data-lucide="phone" aria-hidden="true" size="18"></i>
                 <span>(424) 407-1407</span>
             </a>
             <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
         </div>
     </div>
 
+
+    <main id="main">
     <section class="service-hero" style="background-image: url('images/lighting.png');">
         <div class="container">
             <h1>Emergency Lighting & Exit Sign Testing</h1>
@@ -112,7 +138,7 @@
                     </ul>
 
                     <div style="margin-top: 2rem;">
-                        <a href="#quote" class="btn btn-primary">Get Bundle Pricing</a>
+                        <a href="index.html#quote" class="btn btn-primary">Get Bundle Pricing</a>
                     </div>
                 </div>
                 <div class="service-image" style="background-image: url('images/lighting.png');"></div>
@@ -120,13 +146,43 @@
         </div>
     </section>
 
+    <!-- Related Services -->
+    <section class="section section-bg">
+        <div class="container">
+            <h2 class="text-center">Related Fire Safety Services</h2>
+            <div class="grid-3" style="margin-top: 2.5rem;">
+                <a href="annual-testing.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="clipboard-check"></i></div>
+                    <h3>Annual Fire Alarm Testing</h3>
+                    <p>Bundle emergency lighting with NFPA 72 annual fire alarm testing in a single visit.</p>
+                </a>
+                <a href="maintenance.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="wrench"></i></div>
+                    <h3>Fire Alarm Maintenance &amp; Repair</h3>
+                    <p>Battery replacement, panel troubleshooting, and code-compliant repairs across LA.</p>
+                </a>
+                <a href="compliance.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="file-check"></i></div>
+                    <h3>Compliance Consulting</h3>
+                    <p>NFPA 101 Life Safety Code guidance, audit prep, and inspection-frequency planning.</p>
+                </a>
+            </div>
+            <p class="text-center" style="margin-top: 2rem;">
+                <a href="areas.html">See all cities we serve</a> &middot; <a href="services.html">View all services</a>
+            </p>
+        </div>
+    </section>
+    </main>
+
+
     <footer class="footer">
         <div class="container footer-bottom">
-            <p>&copy; 2026 FireAlarmTestingPro. All rights reserved.</p>
+            <p>&copy; <span id="footerYear">2026</span> FireAlarmTestingPro. All rights reserved.</p>
         </div>
     </footer>
     <script>
         lucide.createIcons();
+        var yearEl = document.getElementById('footerYear'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');

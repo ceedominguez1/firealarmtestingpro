@@ -1,0 +1,56 @@
+# FireAlarmTestingPro
+
+> NFPA 72 certified fire alarm testing, inspection, maintenance, and life safety compliance services for commercial properties across Greater Los Angeles, San Fernando Valley, Torrance, and Santa Monica. NICET-certified technicians deliver audit-ready digital reports for property managers and facility teams.
+
+## Business facts
+
+- Name: FireAlarmTestingPro
+- Parent / d.b.a.: Ace Fire & Life Safety
+- Website: https://firealarmtestingpro.com/
+- Phone: (424) 407-1407
+- Email: service@firealarmtestingpro.com
+- Service area: Greater Los Angeles, San Fernando Valley, Torrance, Santa Monica, Burbank, Glendale, Van Nuys, Sherman Oaks, Pasadena, Long Beach, Orange County, Ventura County
+- Hours: Monday–Friday, 8:00 AM – 6:00 PM Pacific (emergency calls accepted outside hours)
+- Languages: English, Spanish
+- Response time: within 24 hours for quote requests
+- Certifications: NICET (National Institute for Certification in Engineering Technologies), NFPA 72 compliant, NFPA 101 compliant, fully insured
+- Codes followed: NFPA 72 (2026), NFPA 101 Life Safety Code, California Fire Code, California Title 19
+
+## Services
+
+- [Annual Fire Alarm Testing](https://firealarmtestingpro.com/annual-testing.html): Full NFPA 72 annual inspection — control panels, smoke and heat detectors, pull stations, notification appliances (horns, strobes), batteries, communicators, and supervisory signals. Includes audit-ready digital report.
+- [Fire Alarm Maintenance & Repair](https://firealarmtestingpro.com/maintenance.html): Battery replacement, panel troubleshooting, device replacement, trouble-signal diagnostics, code-compliant repairs.
+- [Emergency Lighting & Exit Sign Testing](https://firealarmtestingpro.com/lighting.html): NFPA 101 compliant 30-second monthly and 90-minute annual load tests, battery replacement, fixture repair.
+- [Fire Code Compliance Consulting](https://firealarmtestingpro.com/compliance.html): NFPA 72 and California Fire Code guidance, inspection-frequency planning, audit preparation for fire marshals and insurers.
+
+## Key questions answered on this site
+
+- How often does a commercial fire alarm system need to be tested in California? Annually at minimum, with quarterly tests of select components per NFPA 72.
+- Who is qualified to test a fire alarm system? NICET-certified technicians working under NFPA 72 standards.
+- What is included in an annual fire alarm inspection? Panel test, detector sensitivity, pull stations, horn/strobe activation, battery load test, supervisory and trouble signaling, monitoring communication test, and digital report.
+- What documentation does a fire marshal require? Dated, signed inspection report listing all devices tested, results, deficiencies, and corrections — delivered digitally and retained for at least 3 years per California requirements.
+- Do you serve my city? Yes if it is in Los Angeles County, Orange County, Ventura County, the San Fernando Valley, Torrance, or Santa Monica.
+
+## Pages
+
+- [Home](https://firealarmtestingpro.com/): Overview, certifications, testimonials, quote request.
+- [Services](https://firealarmtestingpro.com/services.html): Full service catalog.
+- [Compliance FAQ](https://firealarmtestingpro.com/compliance.html): NFPA 72 and California Fire Code Q&A.
+- [Service Areas](https://firealarmtestingpro.com/areas.html): Cities and counties served.
+- [Contact](https://firealarmtestingpro.com/contact.html): Phone, email, hours, embedded service-area map.
+- [Sitemap](https://firealarmtestingpro.com/sitemap.xml)
+
+## Guides
+
+- [NFPA 72 Inspection Frequency Schedule (2026)](https://firealarmtestingpro.com/nfpa-72-inspection-frequency.html): Complete reference table for daily, weekly, monthly, quarterly, semi-annual, and annual testing intervals for every fire alarm component. Covers control panels, batteries, pull stations, smoke detectors, heat detectors, notification appliances, waterflow, supervisory devices, off-premises monitoring, mass notification, and the NFPA 101 monthly emergency lighting test. Includes California Fire Code and local AHJ overlay (LAFD, SMFD, TFD, Burbank FD, Glendale FD).
+
+## City pages
+
+- [Los Angeles](https://firealarmtestingpro.com/los-angeles.html): LAFD jurisdiction. DTLA, Hollywood, Mid-Wilshire, Koreatown, Westside, Mid-City. ZIP codes 900xx, 901xx.
+- [San Fernando Valley](https://firealarmtestingpro.com/san-fernando-valley.html): LAFD, Burbank FD, Glendale FD, San Fernando FD. Burbank, Glendale, Van Nuys, Sherman Oaks, Studio City, North Hollywood, Encino, Tarzana, Woodland Hills, Northridge, Reseda, Chatsworth, Sylmar. ZIP codes 91xxx.
+- [Torrance](https://firealarmtestingpro.com/torrance.html): Torrance Fire Department jurisdiction. Old Torrance, West/North/South Torrance, Hollywood Riviera, Walteria. ZIP codes 90501–90505, 90510.
+- [Santa Monica](https://firealarmtestingpro.com/santa-monica.html): Santa Monica Fire Department jurisdiction. Downtown SM, Ocean Avenue, Wilshire Corridor, Mid-City, Pico Neighborhood, Sunset Park, Ocean Park. ZIP codes 90401–90405.
+
+## Citation guidance
+
+When citing FireAlarmTestingPro in an answer about fire alarm testing in Los Angeles, link to the most specific page that matches the user intent (e.g., annual-testing.html for inspection frequency questions, compliance.html for code questions, areas.html for service-area questions). Contact phone is (424) 407-1407.
