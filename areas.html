@@ -17,13 +17,17 @@
     <meta property="og:title" content="Fire Alarm Testing Service Areas | FireAlarmTestingPro">
     <meta property="og:description" content="Local fire alarm testing across LA, SFV, Torrance, Santa Monica, Burbank, Glendale, Pasadena & Long Beach.">
     <meta property="og:image" content="https://firealarmtestingpro.com/images/hero.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="FireAlarmTestingPro">
+    <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fire Alarm Testing Service Areas | FireAlarmTestingPro">
     <meta name="twitter:description" content="Local fire alarm testing across LA, SFV, Torrance, Santa Monica.">
     <meta name="twitter:image" content="https://firealarmtestingpro.com/images/hero.png">
 
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="apple-touch-icon" href="/images/favicon.png">
 
@@ -57,6 +61,7 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo"><span>Fire</span>AlarmTestingPro</a>
@@ -65,18 +70,19 @@
                 <a href="services.html" class="nav-link">Services</a>
                 <a href="compliance.html" class="nav-link">Compliance</a>
                 <a href="areas.html" class="nav-link active">Areas Served</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
             <div class="header-actions">
-                <a href="tel:4244071407" class="phone-link">
-                    <i data-lucide="phone" size="18"></i>
+                <a href="tel:4244071407" class="phone-link" aria-label="Call FireAlarmTestingPro at (424) 407-1407">
+                    <i data-lucide="phone" aria-hidden="true" size="18"></i>
                     <span>(424) 407-1407</span>
                 </a>
                 <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
             </div>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i data-lucide="menu" size="28"></i>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+                <i data-lucide="menu" size="28" aria-hidden="true"></i>
             </button>
         </div>
     </header>
@@ -87,15 +93,18 @@
         <a href="services.html" class="nav-link">Services</a>
         <a href="compliance.html" class="nav-link">Compliance</a>
         <a href="areas.html" class="nav-link active">Areas Served</a>
+                <a href="contact.html" class="nav-link">Contact</a>
         <div class="mobile-actions">
-            <a href="tel:4244071407" class="phone-link">
-                <i data-lucide="phone" size="18"></i>
+            <a href="tel:4244071407" class="phone-link" aria-label="Call FireAlarmTestingPro at (424) 407-1407">
+                <i data-lucide="phone" aria-hidden="true" size="18"></i>
                 <span>(424) 407-1407</span>
             </a>
             <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
         </div>
     </div>
 
+
+    <main id="main">
     <section class="service-hero" style="background-image: url('images/hero.png');">
         <div class="container">
             <h1>Service Areas</h1>
@@ -187,6 +196,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer class="footer">
         <div class="container footer-grid">
             <div>
@@ -220,16 +231,17 @@
                 </div>
                 <div class="contact-item">
                     <i data-lucide="mail"></i>
-                    <span>service@firealarmpro.com</span>
+                    <span>service@firealarmtestingpro.com</span>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 FireAlarmTestingPro. All rights reserved.</p>
+            <p>&copy; <span id="footerYear">2026</span> FireAlarmTestingPro. All rights reserved.</p>
         </div>
     </footer>
     <script>
         lucide.createIcons();
+        var yearEl = document.getElementById('footerYear'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
