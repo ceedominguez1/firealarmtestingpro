@@ -41,7 +41,21 @@
       "category": "Fire Safety Maintenance",
       "description": "Troubleshooting, battery replacement, panel repair, and code-compliant fire alarm fixes across Greater Los Angeles. Minimize downtime, restore compliance.",
       "provider": {"@id": "https://firealarmtestingpro.com/#business"},
-      "areaServed": [{"@type": "City", "name": "Los Angeles"}, {"@type": "AdministrativeArea", "name": "San Fernando Valley"}, {"@type": "City", "name": "Santa Monica"}, {"@type": "City", "name": "Torrance"}]
+      "areaServed": [{"@type": "City", "name": "Los Angeles"}, {"@type": "AdministrativeArea", "name": "San Fernando Valley"}, {"@type": "City", "name": "Santa Monica"}, {"@type": "City", "name": "Torrance"}],
+      "audience": {"@type": "BusinessAudience", "name": "Commercial property managers and facility teams"},
+      "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "USD",
+          "description": "Maintenance and repair pricing is quoted per visit and varies by scope (battery replacement, panel diagnostics, device replacement). Emergency response available. Request a free quote."
+        },
+        "url": "https://firealarmtestingpro.com/#quote",
+        "businessFunction": "https://purl.org/goodrelations/v1#Sell"
+      }
     }
     </script>
 </head>
@@ -122,6 +136,33 @@
                 </div>
                 <div class="service-image" style="background-image: url('images/maintenance.png');"></div>
             </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="section section-bg">
+        <div class="container">
+            <h2 class="text-center">Related Fire Safety Services</h2>
+            <div class="grid-3" style="margin-top: 2.5rem;">
+                <a href="annual-testing.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="clipboard-check"></i></div>
+                    <h3>Annual Fire Alarm Testing</h3>
+                    <p>Full NFPA 72 inspection of every detector, pull station, panel, and notification appliance.</p>
+                </a>
+                <a href="lighting.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="lightbulb"></i></div>
+                    <h3>Emergency Lighting Testing</h3>
+                    <p>NFPA 101 emergency lighting and exit sign load testing &mdash; battery replacement included.</p>
+                </a>
+                <a href="compliance.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="file-check"></i></div>
+                    <h3>Compliance Consulting</h3>
+                    <p>NFPA 72 and California Fire Code Q&amp;A, audit prep, and inspection-frequency planning.</p>
+                </a>
+            </div>
+            <p class="text-center" style="margin-top: 2rem;">
+                <a href="areas.html">See all cities we serve</a> &middot; <a href="services.html">View all services</a>
+            </p>
         </div>
     </section>
 

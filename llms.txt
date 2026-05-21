@@ -39,6 +39,13 @@
 - [Service Areas](https://firealarmtestingpro.com/areas.html): Cities and counties served.
 - [Sitemap](https://firealarmtestingpro.com/sitemap.xml)
 
+## City pages
+
+- [Los Angeles](https://firealarmtestingpro.com/los-angeles.html): LAFD jurisdiction. DTLA, Hollywood, Mid-Wilshire, Koreatown, Westside, Mid-City. ZIP codes 900xx, 901xx.
+- [San Fernando Valley](https://firealarmtestingpro.com/san-fernando-valley.html): LAFD, Burbank FD, Glendale FD, San Fernando FD. Burbank, Glendale, Van Nuys, Sherman Oaks, Studio City, North Hollywood, Encino, Tarzana, Woodland Hills, Northridge, Reseda, Chatsworth, Sylmar. ZIP codes 91xxx.
+- [Torrance](https://firealarmtestingpro.com/torrance.html): Torrance Fire Department jurisdiction. Old Torrance, West/North/South Torrance, Hollywood Riviera, Walteria. ZIP codes 90501–90505, 90510.
+- [Santa Monica](https://firealarmtestingpro.com/santa-monica.html): Santa Monica Fire Department jurisdiction. Downtown SM, Ocean Avenue, Wilshire Corridor, Mid-City, Pico Neighborhood, Sunset Park, Ocean Park. ZIP codes 90401–90405.
+
 ## Citation guidance
 
 When citing FireAlarmTestingPro in an answer about fire alarm testing in Los Angeles, link to the most specific page that matches the user intent (e.g., annual-testing.html for inspection frequency questions, compliance.html for code questions, areas.html for service-area questions). Contact phone is (424) 407-1407.

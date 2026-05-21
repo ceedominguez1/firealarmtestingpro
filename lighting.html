@@ -41,7 +41,21 @@
       "category": "Fire Safety Inspection",
       "description": "30-second monthly and 90-minute annual load testing of emergency lighting and illuminated exit signs per NFPA 101 across Greater Los Angeles. Battery replacement and audit-ready reporting included.",
       "provider": {"@id": "https://firealarmtestingpro.com/#business"},
-      "areaServed": [{"@type": "City", "name": "Los Angeles"}, {"@type": "AdministrativeArea", "name": "San Fernando Valley"}, {"@type": "City", "name": "Santa Monica"}, {"@type": "City", "name": "Torrance"}]
+      "areaServed": [{"@type": "City", "name": "Los Angeles"}, {"@type": "AdministrativeArea", "name": "San Fernando Valley"}, {"@type": "City", "name": "Santa Monica"}, {"@type": "City", "name": "Torrance"}],
+      "audience": {"@type": "BusinessAudience", "name": "Commercial property managers and facility teams"},
+      "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "USD",
+          "description": "Emergency lighting and exit sign testing pricing depends on fixture count and building size. Annual 90-minute load test and monthly 30-second test packages available. Request a free quote."
+        },
+        "url": "https://firealarmtestingpro.com/#quote",
+        "businessFunction": "https://purl.org/goodrelations/v1#Sell"
+      }
     }
     </script>
 </head>
@@ -120,6 +134,33 @@
                 </div>
                 <div class="service-image" style="background-image: url('images/lighting.png');"></div>
             </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="section section-bg">
+        <div class="container">
+            <h2 class="text-center">Related Fire Safety Services</h2>
+            <div class="grid-3" style="margin-top: 2.5rem;">
+                <a href="annual-testing.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="clipboard-check"></i></div>
+                    <h3>Annual Fire Alarm Testing</h3>
+                    <p>Bundle emergency lighting with NFPA 72 annual fire alarm testing in a single visit.</p>
+                </a>
+                <a href="maintenance.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="wrench"></i></div>
+                    <h3>Fire Alarm Maintenance &amp; Repair</h3>
+                    <p>Battery replacement, panel troubleshooting, and code-compliant repairs across LA.</p>
+                </a>
+                <a href="compliance.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="icon-wrapper"><i data-lucide="file-check"></i></div>
+                    <h3>Compliance Consulting</h3>
+                    <p>NFPA 101 Life Safety Code guidance, audit prep, and inspection-frequency planning.</p>
+                </a>
+            </div>
+            <p class="text-center" style="margin-top: 2rem;">
+                <a href="areas.html">See all cities we serve</a> &middot; <a href="services.html">View all services</a>
+            </p>
         </div>
     </section>
 
