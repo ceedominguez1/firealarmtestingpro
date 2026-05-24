@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://firealarmtestingpro.com/santa-monica.html">
     <meta property="og:title" content="Fire Alarm Testing Santa Monica | NFPA 72 &amp; SMFD Compliance">
     <meta property="og:description" content="NFPA 72 fire alarm testing in Santa Monica by NICET technicians familiar with the Santa Monica Fire Department.">
-    <meta property="og:image" content="https://firealarmtestingpro.com/images/hero.png">
+    <meta property="og:image" content="https://firealarmtestingpro.com/images/hero.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="FireAlarmTestingPro">
@@ -27,14 +27,19 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fire Alarm Testing Santa Monica | NFPA 72 &amp; SMFD Compliance">
     <meta name="twitter:description" content="NFPA 72 fire alarm testing in Santa Monica for tech offices, hotels, mixed-use &amp; medical properties.">
-    <meta name="twitter:image" content="https://firealarmtestingpro.com/images/hero.png">
+    <meta name="twitter:image" content="https://firealarmtestingpro.com/images/hero.jpg">
+    <meta name="twitter:image:alt" content="Fire Alarm Testing Santa Monica | NFPA 72 Inspection &amp; SMFD Compliance">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="apple-touch-icon" href="/images/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -102,7 +107,8 @@
                 <a href="tel:4244071407" class="phone-link" aria-label="Call FireAlarmTestingPro at (424) 407-1407"><i data-lucide="phone" aria-hidden="true" size="18"></i><span>(424) 407-1407</span></a>
                 <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i data-lucide="menu" size="28"></i></button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+                <i data-lucide="menu" size="28" aria-hidden="true"></i></button>
         </div>
     </header>
 
@@ -120,7 +126,7 @@
 
 
     <main id="main">
-    <section class="service-hero" style="background-image: url('images/hero.png');">
+    <section class="service-hero service-hero--hero">
         <div class="container">
             <h1>Fire Alarm Testing &amp; Inspection in Santa Monica</h1>
             <p class="hero-sub">NFPA 72 compliance for Westside offices, hotels, and mixed-use properties.</p>
@@ -152,7 +158,7 @@
                         <a href="tel:4244071407" class="btn btn-secondary" style="margin-left: 0.5rem;">Call (424) 407-1407</a>
                     </div>
                 </div>
-                <div class="service-image" style="background-image: url('images/hero.png');"></div>
+                <div class="service-image service-image--hero"></div>
             </div>
         </div>
     </section>
@@ -240,8 +246,8 @@
             </div>
             <div>
                 <h3>Contact Us</h3>
-                <div class="contact-item"><i data-lucide="phone"></i><span>(424) 407-1407</span></div>
-                <div class="contact-item"><i data-lucide="mail"></i><span>service@firealarmtestingpro.com</span></div>
+                <div class="contact-item"><i data-lucide="phone" aria-hidden="true"></i><a href="tel:4244071407">(424) 407-1407</a></div>
+                <div class="contact-item"><i data-lucide="mail" aria-hidden="true"></i><a href="mailto:service@firealarmtestingpro.com">service@firealarmtestingpro.com</a></div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -250,6 +256,8 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
         lucide.createIcons();
         var yearEl = document.getElementById('footerYear'); if (yearEl) yearEl.textContent = new Date().getFullYear();
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -259,6 +267,8 @@
             const icon = mobileMenuBtn.querySelector('i');
             icon.setAttribute('data-lucide', mobileMenu.classList.contains('active') ? 'x' : 'menu');
             lucide.createIcons();
+        });
+    
         });
     </script>
 </body>

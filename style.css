@@ -42,6 +42,7 @@ body {
     background-color: var(--color-bg-white);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    font-size: 16px;
 }
 
 h1,
@@ -88,6 +89,8 @@ button,
     align-items: center;
     justify-content: center;
     padding: 0.75rem 1.5rem;
+    min-height: 48px;
+    min-width: 48px;
     border-radius: var(--radius-md);
     font-weight: 600;
     font-size: 1rem;
@@ -918,3 +921,95 @@ cite {
         grid-template-columns: 1fr;
     }
 }
+/* ============================================================
+   Perf v2: WebP image-set with JPG fallback for hero variants
+   ============================================================ */
+.service-hero--hero { background-image: image-set(url('images/hero.webp') type('image/webp') 1x, url('images/hero@2x.webp') type('image/webp') 2x); }
+.service-hero--annual { background-image: image-set(url('images/annual_testing.webp') type('image/webp') 1x, url('images/annual_testing@2x.webp') type('image/webp') 2x); }
+.service-hero--lighting { background-image: image-set(url('images/lighting.webp') type('image/webp') 1x, url('images/lighting@2x.webp') type('image/webp') 2x); }
+.service-hero--maintenance { background-image: image-set(url('images/maintenance.webp') type('image/webp') 1x, url('images/maintenance@2x.webp') type('image/webp') 2x); }
+@supports not (background-image: image-set(url('a') 1x)) {
+    .service-hero--hero { background-image: url('images/hero.jpg'); }
+    .service-hero--annual { background-image: url('images/annual_testing.jpg'); }
+    .service-hero--lighting { background-image: url('images/lighting.jpg'); }
+    .service-hero--maintenance { background-image: url('images/maintenance.jpg'); }
+}
+
+.service-image--hero { background-image: image-set(url('images/hero.webp') type('image/webp') 1x, url('images/hero@2x.webp') type('image/webp') 2x); }
+.service-image--annual { background-image: image-set(url('images/annual_testing.webp') type('image/webp') 1x, url('images/annual_testing@2x.webp') type('image/webp') 2x); }
+.service-image--lighting { background-image: image-set(url('images/lighting.webp') type('image/webp') 1x, url('images/lighting@2x.webp') type('image/webp') 2x); }
+.service-image--maintenance { background-image: image-set(url('images/maintenance.webp') type('image/webp') 1x, url('images/maintenance@2x.webp') type('image/webp') 2x); }
+@supports not (background-image: image-set(url('a') 1x)) {
+    .service-image--hero { background-image: url('images/hero.jpg'); }
+    .service-image--annual { background-image: url('images/annual_testing.jpg'); }
+    .service-image--lighting { background-image: url('images/lighting.jpg'); }
+    .service-image--maintenance { background-image: url('images/maintenance.jpg'); }
+}
+
+/* Touch target 48x48 minimum on interactive elements */
+.nav-link {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+}
+.phone-link {
+    min-height: 48px;
+    padding: 0.5rem 0.25rem;
+}
+.mobile-menu-btn {
+    min-width: 48px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="checkbox"],
+input[type="radio"],
+textarea,
+select,
+button {
+    font-size: 16px; /* prevent iOS zoom on focus + readability */
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    min-height: 48px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    min-width: 24px;
+    min-height: 24px;
+    /* surround with 12px padding gives an effective 48px hit area when wrapped in a label */
+}
+
+/* Mobile readability floor */
+@media (max-width: 768px) {
+    body,
+    p,
+    li,
+    span,
+    .nav-link,
+    .footer-links li a,
+    .contact-item span {
+        font-size: 16px;
+    }
+}
+
+/* Skip-link (was added in PR #1, retained here for completeness) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #111827;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    z-index: 9999;
+    font-weight: 600;
+    border-radius: 0 0 6px 0;
+}
+.skip-link:focus { left: 0; outline: 3px solid #F59E0B; }
