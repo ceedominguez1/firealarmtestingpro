@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://firealarmtestingpro.com/compliance.html">
     <meta property="og:title" content="Fire Alarm Compliance FAQ & NFPA 72 Resources | FireAlarmTestingPro">
     <meta property="og:description" content="NFPA 72 and California Fire Code compliance guide for LA property managers. Inspection frequency, what's tested, instant digital reports.">
-    <meta property="og:image" content="https://firealarmtestingpro.com/images/annual_testing.png">
+    <meta property="og:image" content="https://firealarmtestingpro.com/images/annual_testing.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="FireAlarmTestingPro">
@@ -27,15 +27,20 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fire Alarm Compliance FAQ & NFPA 72 Resources">
     <meta name="twitter:description" content="NFPA 72 and California Fire Code compliance guide for LA property managers.">
-    <meta name="twitter:image" content="https://firealarmtestingpro.com/images/annual_testing.png">
+    <meta name="twitter:image" content="https://firealarmtestingpro.com/images/annual_testing.jpg">
+    <meta name="twitter:image:alt" content="Fire Alarm Compliance FAQ & NFPA 72 Resources">
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="apple-touch-icon" href="/images/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <!-- Schema: FAQPage -->
@@ -151,7 +156,7 @@
 
 
     <main id="main">
-    <section class="service-hero" style="background-image: url('images/annual_testing.png');">
+    <section class="service-hero service-hero--annual">
         <div class="container">
             <h1>Compliance & Documentation</h1>
             <p class="hero-sub">Resources, Guides, and Answers for Property Managers.</p>
@@ -269,14 +274,8 @@
                     <i data-lucide="map-pin"></i>
                     <span>Serving Greater Los Angeles, Orange County, & SFV</span>
                 </div>
-                <div class="contact-item">
-                    <i data-lucide="phone"></i>
-                    <span>(424) 407-1407</span>
-                </div>
-                <div class="contact-item">
-                    <i data-lucide="mail"></i>
-                    <span>service@firealarmtestingpro.com</span>
-                </div>
+                <div class="contact-item"><i data-lucide="phone" aria-hidden="true"></i><a href="tel:4244071407">(424) 407-1407</a></div>
+                <div class="contact-item"><i data-lucide="mail" aria-hidden="true"></i><a href="mailto:service@firealarmtestingpro.com">service@firealarmtestingpro.com</a></div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -285,6 +284,8 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
         lucide.createIcons();
         var yearEl = document.getElementById('footerYear'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -316,6 +317,8 @@
                 }
                 lucide.createIcons();
             });
+        });
+    
         });
     </script>
 </body>

@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://firealarmtestingpro.com/contact.html">
     <meta property="og:title" content="Contact FireAlarmTestingPro | Fire Alarm Testing Los Angeles">
     <meta property="og:description" content="Get a free quote for fire alarm testing, inspection, maintenance, or emergency lighting in Los Angeles.">
-    <meta property="og:image" content="https://firealarmtestingpro.com/images/hero.png">
+    <meta property="og:image" content="https://firealarmtestingpro.com/images/hero.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="FireAlarmTestingPro">
@@ -27,14 +27,19 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact FireAlarmTestingPro | (424) 407-1407">
     <meta name="twitter:description" content="Free quote for fire alarm testing &amp; inspection across Greater Los Angeles.">
-    <meta name="twitter:image" content="https://firealarmtestingpro.com/images/hero.png">
+    <meta name="twitter:image" content="https://firealarmtestingpro.com/images/hero.jpg">
+    <meta name="twitter:image:alt" content="Contact FireAlarmTestingPro | Fire Alarm Testing Los Angeles">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="apple-touch-icon" href="/images/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <!-- Schema: ContactPage + LocalBusiness reference -->
@@ -54,7 +59,7 @@
         "telephone": "+1-424-407-1407",
         "email": "service@firealarmtestingpro.com",
         "url": "https://firealarmtestingpro.com/",
-        "image": "https://firealarmtestingpro.com/images/hero.png",
+        "image": "https://firealarmtestingpro.com/images/hero.jpg",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
@@ -139,7 +144,7 @@
 
     <main id="main">
 
-    <section class="service-hero" style="background-image: url('images/hero.png');" aria-label="Contact hero">
+    <section class="service-hero service-hero--hero" aria-label="Contact hero">
         <div class="container">
             <h1>Contact FireAlarmTestingPro</h1>
             <p class="hero-sub">Free quotes within 24 hours. Same-day emergency response across Greater LA.</p>
@@ -288,6 +293,8 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
         lucide.createIcons();
         var yearEl = document.getElementById('footerYear');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -301,6 +308,8 @@
             const icon = mobileMenuBtn.querySelector('i');
             icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
             lucide.createIcons();
+        });
+    
         });
     </script>
 </body>
