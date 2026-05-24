@@ -42,13 +42,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Preload hero -->
     <link rel="preload" as="image" href="images/hero.png">
     <!-- Lucide Icons (pinned) -->
-    <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <!-- Schema: LocalBusiness -->
@@ -497,8 +495,6 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
         lucide.createIcons();
 
         // Dynamic footer year
@@ -650,8 +646,6 @@
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Submit Request';
             });
-        });
-    
         });
     </script>
 </body>
