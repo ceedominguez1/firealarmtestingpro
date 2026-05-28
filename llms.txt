@@ -8,7 +8,6 @@
 - Parent / d.b.a.: Ace Fire & Life Safety
 - Website: https://firealarmtestingpro.com/
 - Phone: (424) 407-1407
-- Email: service@firealarmtestingpro.com
 - Service area: Greater Los Angeles, San Fernando Valley, Torrance, Santa Monica, Burbank, Glendale, Van Nuys, Sherman Oaks, Pasadena, Long Beach, Orange County, Ventura County
 - Hours: Monday–Friday, 8:00 AM – 6:00 PM Pacific (emergency calls accepted outside hours)
 - Languages: English, Spanish
@@ -37,7 +36,7 @@
 - [Services](https://firealarmtestingpro.com/services.html): Full service catalog.
 - [Compliance FAQ](https://firealarmtestingpro.com/compliance.html): NFPA 72 and California Fire Code Q&A.
 - [Service Areas](https://firealarmtestingpro.com/areas.html): Cities and counties served.
-- [Contact](https://firealarmtestingpro.com/contact.html): Phone, email, hours, embedded service-area map.
+- [Contact](https://firealarmtestingpro.com/contact.html): Phone, hours, embedded service-area map.
 - [Sitemap](https://firealarmtestingpro.com/sitemap.xml)
 
 ## Guides
