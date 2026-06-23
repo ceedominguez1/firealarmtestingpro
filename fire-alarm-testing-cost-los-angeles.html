@@ -163,6 +163,10 @@
     ]
   }
   </script>
+  <style>
+    .faq-answer { display: none; }
+    .faq-item.active .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 
@@ -199,13 +203,13 @@
         </div>
     </div>
 
-  <section class="service-hero hero">
+  <section class="service-hero service-hero--hero">
     <div class="container text-center">
       <nav aria-label="Breadcrumb" class="breadcrumb">
         <a href="/">Home</a> &rsaquo; <span>Fire Alarm Testing Cost in Los Angeles</span>
       </nav>
       <h1>Fire Alarm Testing Cost in Los Angeles: A 2026 Commercial Price Guide</h1>
-      <p class="lead-text">What should a commercial building owner in Los Angeles expect to pay for fire alarm inspection, testing, and maintenance in 2026? Here are realistic price ranges by building size, the factors that move the number up or down, the LAFD and city fees that sit on top, and how multi-property managers keep costs in check.</p>
+      <p class="hero-sub">What should a commercial building owner in Los Angeles expect to pay for fire alarm inspection, testing, and maintenance in 2026? Here are realistic price ranges by building size, the factors that move the number up or down, the LAFD and city fees that sit on top, and how multi-property managers keep costs in check.</p>
       <a href="/index.html#quote" class="btn btn-primary">Get a Free Fire Alarm Testing Quote</a>
     </div>
   </section>
@@ -256,29 +260,33 @@
 
       <h2>Frequently asked questions</h2>
 
+      <div class="faq-list">
+
       <div class="faq-item">
-        <p class="faq-question">How much does commercial fire alarm testing cost in Los Angeles?</p>
-        <p class="faq-answer">Annual commercial fire alarm ITM in the LA area commonly ranges from about $300 per year for a small single-panel space to roughly $30,000 per year for a high-rise with 200+ devices and emergency responder communication coverage. The number of devices is the biggest driver. Most small-to-mid buildings fall between $300 and $2,500 per year for testing alone, with monitoring billed separately.</p>
+        <div class="faq-question">How much does commercial fire alarm testing cost in Los Angeles? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Annual commercial fire alarm ITM in the LA area commonly ranges from about $300 per year for a small single-panel space to roughly $30,000 per year for a high-rise with 200+ devices and emergency responder communication coverage. The number of devices is the biggest driver. Most small-to-mid buildings fall between $300 and $2,500 per year for testing alone, with monitoring billed separately.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">What drives the price of a fire alarm inspection?</p>
-        <p class="faq-answer">Device count is the primary, roughly linear driver — every detector, pull station, horn/strobe, waterflow switch, and tamper switch is tested individually. Other factors: building height and complexity, whether you add 24/7 monitoring, smoke-detector sensitivity testing (often $5 to $15 per detector), panel age and condition, and any deficiencies that require a return visit.</p>
+        <div class="faq-question">What drives the price of a fire alarm inspection? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Device count is the primary, roughly linear driver — every detector, pull station, horn/strobe, waterflow switch, and tamper switch is tested individually. Other factors: building height and complexity, whether you add 24/7 monitoring, smoke-detector sensitivity testing (often $5 to $15 per detector), panel age and condition, and any deficiencies that require a return visit.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">Are there separate LAFD or city fees on top of the testing cost?</p>
-        <p class="faq-answer">Yes. Beyond what your contractor charges, your local fire department (LAFD in the City of LA, or the relevant city or county department) assesses its own inspection, permit, and re-inspection fees. A failed re-inspection commonly adds about $150 to $350. These municipal fees are set by the AHJ and vary by jurisdiction and occupancy.</p>
+        <div class="faq-question">Are there separate LAFD or city fees on top of the testing cost? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Yes. Beyond what your contractor charges, your local fire department (LAFD in the City of LA, or the relevant city or county department) assesses its own inspection, permit, and re-inspection fees. A failed re-inspection commonly adds about $150 to $350. These municipal fees are set by the AHJ and vary by jurisdiction and occupancy.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">How can a property manager with multiple buildings save?</p>
-        <p class="faq-answer">Bundle all properties under one contractor on a single coordinated ITM schedule to cut per-visit mobilization and route technicians efficiently. Schedule the annual inspection early so deficiencies can be corrected before a re-inspection deadline, avoiding repeat trip charges. Centralized, organized ITM records also speed inspections and prevent duplicate testing.</p>
+        <div class="faq-question">How can a property manager with multiple buildings save? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Bundle all properties under one contractor on a single coordinated ITM schedule to cut per-visit mobilization and route technicians efficiently. Schedule the annual inspection early so deficiencies can be corrected before a re-inspection deadline, avoiding repeat trip charges. Centralized, organized ITM records also speed inspections and prevent duplicate testing.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">Does the 2026 California Fire Code change my testing cost?</p>
-        <p class="faq-answer">Modestly for most buildings. The 2025 edition of NFPA 72, enforced from January 1, 2026, moves supervisory device testing (waterflow and tamper switches) from annual to semiannual, typically adding about $200 to $800 per building per year. Buildings needing a dual-path communication upgrade may face a one-time equipment cost.</p>
+        <div class="faq-question">Does the 2026 California Fire Code change my testing cost? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Modestly for most buildings. The 2025 edition of NFPA 72, enforced from January 1, 2026, moves supervisory device testing (waterflow and tamper switches) from annual to semiannual, typically adding about $200 to $800 per building per year. Buildings needing a dual-path communication upgrade may face a one-time equipment cost.</div>
+      </div>
+
       </div>
 
       <div class="text-center">
@@ -305,6 +313,15 @@
                 icon.setAttribute('data-lucide', 'menu');
             }
             lucide.createIcons();
+        });
+        document.querySelectorAll('.faq-question').forEach(function(q){
+            q.addEventListener('click', function(){
+                var item=q.parentElement;
+                item.classList.toggle('active');
+                var icon=q.querySelector('i');
+                icon.setAttribute('data-lucide', item.classList.contains('active') ? 'chevron-up' : 'chevron-down');
+                lucide.createIcons();
+            });
         });
     </script>
 

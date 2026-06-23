@@ -159,6 +159,10 @@
     ]
   }
   </script>
+  <style>
+    .faq-answer { display: none; }
+    .faq-item.active .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 
@@ -195,13 +199,13 @@
         </div>
     </div>
 
-  <section class="service-hero hero">
+  <section class="service-hero service-hero--hero">
     <div class="container text-center">
       <nav aria-label="Breadcrumb" class="breadcrumb">
         <a href="/">Home</a> &rsaquo; <span>Who Can Legally Perform a Fire Alarm Inspection?</span>
       </nav>
       <h1>Who Can Legally Perform a Fire Alarm Inspection in California?</h1>
-      <p class="lead-text">Hiring the wrong company to test your fire alarm system is worse than not testing it at all &mdash; you pay for a report the fire authority may reject, and you carry the liability if the system fails. In California, fire alarm inspection and testing is restricted to licensed contractors. This guide explains exactly who qualifies: the CSLB C-10 and C-16 contractor licenses, the state electrician certificate, NICET certification, and how to verify a contractor before you sign.</p>
+      <p class="hero-sub">Hiring the wrong company to test your fire alarm system is worse than not testing it at all &mdash; you pay for a report the fire authority may reject, and you carry the liability if the system fails. In California, fire alarm inspection and testing is restricted to licensed contractors. This guide explains exactly who qualifies: the CSLB C-10 and C-16 contractor licenses, the state electrician certificate, NICET certification, and how to verify a contractor before you sign.</p>
       <a href="/index.html#quote" class="btn btn-primary">Get a Quote From a Licensed Contractor</a>
     </div>
   </section>
@@ -247,29 +251,33 @@
 
       <h2>Frequently asked questions</h2>
 
+      <div class="faq-list">
+
       <div class="faq-item">
-        <p class="faq-question">Who is legally allowed to inspect and test a fire alarm system in California?</p>
-        <p class="faq-answer">Fire alarm work in California must be performed by a contractor holding a valid CSLB license — either a C-10 Electrical or a C-16 Fire Protection classification — and the work must follow NFPA 72. Employees doing the work are generally expected to hold a California DIR Electrician Certification. A handyman or unlicensed company cannot legally test your system for compliance.</p>
+        <div class="faq-question">Who is legally allowed to inspect and test a fire alarm system in California? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Fire alarm work in California must be performed by a contractor holding a valid CSLB license — either a C-10 Electrical or a C-16 Fire Protection classification — and the work must follow NFPA 72. Employees doing the work are generally expected to hold a California DIR Electrician Certification. A handyman or unlicensed company cannot legally test your system for compliance.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">What is the difference between a C-10 and a C-16 license?</p>
-        <p class="faq-answer">A C-10 is the Electrical contractor classification covering the wiring and electrical systems fire alarms are built on. A C-16 is the Fire Protection contractor classification dedicated to fire protection systems including alarm, sprinkler, and suppression. Either can authorize fire alarm work in California — confirm the contractor carries one active classification before testing begins.</p>
+        <div class="faq-question">What is the difference between a C-10 and a C-16 license? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">A C-10 is the Electrical contractor classification covering the wiring and electrical systems fire alarms are built on. A C-16 is the Fire Protection contractor classification dedicated to fire protection systems including alarm, sprinkler, and suppression. Either can authorize fire alarm work in California — confirm the contractor carries one active classification before testing begins.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">Is NICET certification required to inspect fire alarms in California?</p>
-        <p class="faq-answer">No. NICET certification is not legally required, but it is widely recognized and valued. NICET offers Fire Alarm Systems certification in four levels, from Level I (basic installation) to Level IV (system design). Many AHJs and owners use it to gauge a technician's expertise. The CSLB license is the legal requirement; NICET is a strong additional signal of competence.</p>
+        <div class="faq-question">Is NICET certification required to inspect fire alarms in California? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">No. NICET certification is not legally required, but it is widely recognized and valued. NICET offers Fire Alarm Systems certification in four levels, from Level I (basic installation) to Level IV (system design). Many AHJs and owners use it to gauge a technician's expertise. The CSLB license is the legal requirement; NICET is a strong additional signal of competence.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">Why does it matter who performs the inspection?</p>
-        <p class="faq-answer">It matters for compliance and liability. An inspection by an unqualified person may be rejected by the fire authority, leaving you non-compliant despite paying for it. And if a fire occurs and the system fails after being signed off by someone not legally qualified, the owner can face serious liability. A licensed contractor's work is accepted and defensible.</p>
+        <div class="faq-question">Why does it matter who performs the inspection? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">It matters for compliance and liability. An inspection by an unqualified person may be rejected by the fire authority, leaving you non-compliant despite paying for it. And if a fire occurs and the system fails after being signed off by someone not legally qualified, the owner can face serious liability. A licensed contractor's work is accepted and defensible.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">How can I verify a fire alarm contractor's license in California?</p>
-        <p class="faq-answer">Verify the license through the Contractors State License Board (CSLB) using the contractor's license number. Confirm it is active, in good standing, and carries the C-10 or C-16 classification. It is also reasonable to ask whether technicians hold a California DIR Electrician Certification and, where relevant, NICET Fire Alarm Systems certification. A reputable contractor answers these questions readily.</p>
+        <div class="faq-question">How can I verify a fire alarm contractor's license in California? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Verify the license through the Contractors State License Board (CSLB) using the contractor's license number. Confirm it is active, in good standing, and carries the C-10 or C-16 classification. It is also reasonable to ask whether technicians hold a California DIR Electrician Certification and, where relevant, NICET Fire Alarm Systems certification. A reputable contractor answers these questions readily.</div>
+      </div>
+
       </div>
 
       <div class="text-center">
@@ -296,6 +304,15 @@
                 icon.setAttribute('data-lucide', 'menu');
             }
             lucide.createIcons();
+        });
+        document.querySelectorAll('.faq-question').forEach(function(q){
+            q.addEventListener('click', function(){
+                var item=q.parentElement;
+                item.classList.toggle('active');
+                var icon=q.querySelector('i');
+                icon.setAttribute('data-lucide', item.classList.contains('active') ? 'chevron-up' : 'chevron-down');
+                lucide.createIcons();
+            });
         });
     </script>
 

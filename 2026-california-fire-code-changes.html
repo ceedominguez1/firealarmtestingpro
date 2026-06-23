@@ -165,6 +165,10 @@
     ]
   }
   </script>
+  <style>
+    .faq-answer { display: none; }
+    .faq-item.active .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 
@@ -201,13 +205,13 @@
         </div>
     </div>
 
-  <section class="service-hero hero">
+  <section class="service-hero service-hero--hero">
     <div class="container text-center">
       <nav aria-label="Breadcrumb" class="breadcrumb">
         <a href="/">Home</a> &rsaquo; <span>2026 California Fire Code Changes</span>
       </nav>
       <h1>2026 California Fire Code Changes: What NFPA 72&rsquo;s 2025 Edition Means for LA Commercial Buildings</h1>
-      <p class="lead-text">California now enforces the 2025 edition of NFPA 72 through the 2025 California Fire Code, effective January 1, 2026. Here is what changed, how Los Angeles-area authorities are interpreting it, and the steps commercial building owners should take to stay compliant.</p>
+      <p class="hero-sub">California now enforces the 2025 edition of NFPA 72 through the 2025 California Fire Code, effective January 1, 2026. Here is what changed, how Los Angeles-area authorities are interpreting it, and the steps commercial building owners should take to stay compliant.</p>
       <a href="/index.html#quote" class="btn btn-primary">Get a 2026-Compliance Quote</a>
     </div>
   </section>
@@ -265,29 +269,33 @@
 
       <h2>Frequently asked questions</h2>
 
+      <div class="faq-list">
+
       <div class="faq-item">
-        <p class="faq-question">When does the 2025 edition of NFPA 72 take effect in California?</p>
-        <p class="faq-answer">California adopted NFPA 72, 2025 edition through the 2025 California Fire Code (Title 24, Part 9), with enforcement beginning January 1, 2026. The Los Angeles County Fire Code update also took effect January 1, 2026. Commercial buildings inspected, tested, and maintained in 2026 are evaluated against the new edition.</p>
+        <div class="faq-question">When does the 2025 edition of NFPA 72 take effect in California? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">California adopted NFPA 72, 2025 edition through the 2025 California Fire Code (Title 24, Part 9), with enforcement beginning January 1, 2026. The Los Angeles County Fire Code update also took effect January 1, 2026. Commercial buildings inspected, tested, and maintained in 2026 are evaluated against the new edition.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">What are the most important NFPA 72 2025 changes for commercial buildings?</p>
-        <p class="faq-answer">The four with the biggest operational impact: new cybersecurity requirements for network-connected systems; semiannual functional testing of supervisory devices such as waterflow and tamper switches (previously annual); enhanced communication including dual-path monitoring for many systems; and expanded Restricted Audible Mode Operation guidance requiring AHJ approval and a documented risk analysis.</p>
+        <div class="faq-question">What are the most important NFPA 72 2025 changes for commercial buildings? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">The four with the biggest operational impact: new cybersecurity requirements for network-connected systems; semiannual functional testing of supervisory devices such as waterflow and tamper switches (previously annual); enhanced communication including dual-path monitoring for many systems; and expanded Restricted Audible Mode Operation guidance requiring AHJ approval and a documented risk analysis.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">Do the 2026 changes increase my annual fire alarm testing cost?</p>
-        <p class="faq-answer">For most commercial buildings, yes, modestly. Moving supervisory device testing from annual to semiannual typically adds about $200 to $800 per building per year depending on device count. Buildings that need dual-path communication may have a one-time equipment and labor cost, and networked systems may add cybersecurity review time.</p>
+        <div class="faq-question">Do the 2026 changes increase my annual fire alarm testing cost? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">For most commercial buildings, yes, modestly. Moving supervisory device testing from annual to semiannual typically adds about $200 to $800 per building per year depending on device count. Buildings that need dual-path communication may have a one-time equipment and labor cost, and networked systems may add cybersecurity review time.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">Who enforces the new fire code on my building in the Los Angeles area?</p>
-        <p class="faq-answer">Your local Authority Having Jurisdiction (AHJ): typically LAFD in the City of Los Angeles, the LA County Fire Department in unincorporated areas and contract cities, and city departments such as SMFD (Santa Monica), TFD (Torrance), Burbank Fire, and Glendale Fire. Each enforces the 2025 California Fire Code baseline and may add local amendments.</p>
+        <div class="faq-question">Who enforces the new fire code on my building in the Los Angeles area? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Your local Authority Having Jurisdiction (AHJ): typically LAFD in the City of Los Angeles, the LA County Fire Department in unincorporated areas and contract cities, and city departments such as SMFD (Santa Monica), TFD (Torrance), Burbank Fire, and Glendale Fire. Each enforces the 2025 California Fire Code baseline and may add local amendments.</div>
       </div>
 
       <div class="faq-item">
-        <p class="faq-question">What should building owners do now to stay compliant in 2026?</p>
-        <p class="faq-answer">Confirm your ITM schedule reflects semiannual supervisory testing; ask your contractor whether your monitoring meets the enhanced communication and dual-path expectations; document cybersecurity controls if your system is networked; and keep complete ITM records, since the 2025 edition refines documentation and responsibility requirements.</p>
+        <div class="faq-question">What should building owners do now to stay compliant in 2026? <i data-lucide="chevron-down"></i></div>
+        <div class="faq-answer">Confirm your ITM schedule reflects semiannual supervisory testing; ask your contractor whether your monitoring meets the enhanced communication and dual-path expectations; document cybersecurity controls if your system is networked; and keep complete ITM records, since the 2025 edition refines documentation and responsibility requirements.</div>
+      </div>
+
       </div>
 
       <div class="text-center">
@@ -314,6 +322,15 @@
                 icon.setAttribute('data-lucide', 'menu');
             }
             lucide.createIcons();
+        });
+        document.querySelectorAll('.faq-question').forEach(function(q){
+            q.addEventListener('click', function(){
+                var item=q.parentElement;
+                item.classList.toggle('active');
+                var icon=q.querySelector('i');
+                icon.setAttribute('data-lucide', item.classList.contains('active') ? 'chevron-up' : 'chevron-down');
+                lucide.createIcons();
+            });
         });
     </script>
 
